@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthorService } from '../author.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-author',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private author:AuthorService) { }
+
+  addAuthorData = new FormGroup({
+    authorName: new FormControl('')
+  });
+
+  authorData: any =[];
+  public modal = false;
 
   ngOnInit(): void {
+    this.author.getAllAuthor().subscribe((allData)=>{
+      console.log(allData);
+      this.authorData = allData;
+    });
   }
+
+  deleteAuthor(dataItem:any){
+    // console.log(dataItem);
+    this.author.deleteAuthor(dataItem).subscribe();
+    this.ngOnInit();
+}
+
+ 
 
 }

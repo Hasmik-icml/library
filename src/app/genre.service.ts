@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class GenreService {
 
   constructor(private http:HttpClient) { }
+  
   getAllGenre(){
     return this.http.get('http://localhost:3000/genre');
   }
