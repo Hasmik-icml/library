@@ -14,4 +14,9 @@ export class GenreService {
     console.log("data=", data);
     return this.http.post('http://localhost:3000/genre', data);
   }
+  deleteGenre(dataItem: any){
+    // console.log("for delete=", dataItem);
+    // console.log('http://localhost:3000/genre/'+ `${dataItem}`);
+    return this.http.delete('http://localhost:3000/genre/'+ `${dataItem}`);
+  }
 }

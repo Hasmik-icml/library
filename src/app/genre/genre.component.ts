@@ -18,7 +18,12 @@ export class GenreComponent implements OnInit {
     this.genre.getAllGenre().subscribe((allData)=>{
       console.log(allData);
       this.genreData = allData
-    })
+    });
+  }
+  deleteGenre(dataItem:any){
+      console.log(dataItem);
+      this.genre.deleteGenre(dataItem).subscribe();
+      this.ngOnInit();
   }
 
 }
