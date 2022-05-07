@@ -15,9 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component';
 
 
-
-
-
 const appRoutes: Routes = [
   {path: '', component: BooksComponent},
   {path: 'book', component: BooksComponent},

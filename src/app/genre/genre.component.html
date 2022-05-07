@@ -6,8 +6,8 @@
     <kendo-grid-column field="genreName" title="Genre"> </kendo-grid-column>
     <kendo-grid-column title="Edit/Remove" >   
         <ng-template kendoGridCellTemplate let-dataItem >
-        <input kendoGridEditCommand type="button" value="Edit"  />
+        <input kendoGridEditCommand type="button" value="Edit" (click)="editGenre(dataItem)" />
         <input kendoGridRemoveCommand type="button" value="Remove"  class="btn-edit" (click)="deleteGenre(dataItem.id)"/>
       </ng-template> </kendo-grid-column>
 </kendo-grid>
-<app-add-genre-form *ngIf="modal" (close)="modal = false" ></app-add-genre-form>
+<app-add-genre-form [formGroup] = "addGenreData" *ngIf="modal" (close)="modal = false"  ></app-add-genre-form>

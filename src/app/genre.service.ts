@@ -19,4 +19,9 @@ export class GenreService {
     // console.log('http://localhost:3000/genre/'+ `${dataItem}`);
     return this.http.delete('http://localhost:3000/genre/'+ `${dataItem}`);
   }
+  updateGenreData(id:number, data:any){
+    console.log("put=", id, data);
+    
+    return this.http.put('http://localhost:3000/genre/'+ `${id}`, data);
+  }
 }
