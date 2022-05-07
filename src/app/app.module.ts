@@ -13,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component';
+import { AddAuthorFormComponent } from './add-author-form/add-author-form.component';
 
 
 const appRoutes: Routes = [
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     BooksComponent,
     AuthorComponent,
     GenreComponent,
-    AddGenreFormComponent
+    AddGenreFormComponent,
+    AddAuthorFormComponent
   ],
   imports: [
     BrowserModule,

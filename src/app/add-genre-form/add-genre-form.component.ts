@@ -13,7 +13,7 @@ export class AddGenreFormComponent implements OnInit {
    modalTitle = "ADD NEW GENRE";
    editMode = false;
    editId = 0;
-   @Output() close = new EventEmitter<void>()
+   @Output() close = new EventEmitter<void>() 
 
   constructor(private genre: GenreService, private st: GenreComponent) { }
 

@@ -1,0 +1,15 @@
+<div class="backdrop"></div>
+
+<div class="modal">
+    <form [formGroup] = "addAuthorData" >
+        <nav class="navbar">
+            <h1>{{ modalTitle }}</h1>
+        </nav>
+        <div class="inputDiv">
+            <label for="authorName" class="author-name-lable">Genre Name </label>
+            <input id="authorName"  placeholder="Enter the new author" formControlName="authorName">
+        </div>
+        <input type="submit" class="btn-add" value="Add">
+        <button class="btn-add" (click)="close.emit()">Cancle</button>
+    </form>
+</div>  
