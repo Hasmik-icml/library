@@ -16,6 +16,8 @@ import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component
 
 
 
+
+
 const appRoutes: Routes = [
   {path: '', component: BooksComponent},
   {path: 'book', component: BooksComponent},
@@ -29,7 +31,7 @@ const appRoutes: Routes = [
     BooksComponent,
     AuthorComponent,
     GenreComponent,
-    AddGenreFormComponent,
+    AddGenreFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ButtonsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,8 +9,10 @@ import { GenreService } from '../genre.service';
 export class GenreComponent implements OnInit {
 
   constructor(private genre:GenreService) { }
+  
   genreData: any =[];
- 
+  modal = false;
+
   ngOnInit(): void {
     
     this.genre.getAllGenre().subscribe((allData)=>{

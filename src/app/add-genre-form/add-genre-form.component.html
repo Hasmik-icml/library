@@ -1,0 +1,15 @@
+<div class="backdrop"></div>
+
+<div class="modal">
+    <form>
+        <nav class="navbar">
+            <h1>{{ modalTitle }}</h1>
+        </nav>
+        <div class="inputDiv">
+            <label for="ganreName" class="genre-name-lable">Genre Name </label>
+            <input id="ganreName">
+        </div>
+        <input type="submit" class="btn-add" value="Add">
+        <button class="btn-add" (click)="close.emit()">Cancle</button>
+    </form>
+</div>
