@@ -15,7 +15,7 @@ export class GenreComponent implements OnInit {
       genreName: new FormControl('')
   });
 
-
+  editMode = false;
   genreData: any =[];
   public modal = false;
 
@@ -36,6 +36,7 @@ export class GenreComponent implements OnInit {
   editGenre(dataItem: any){
     console.log(dataItem);
     this.modal = true;
+    this.editMode = true;
     this.addGenreData = new FormGroup({
       genreName: new FormControl(dataItem)
   });
