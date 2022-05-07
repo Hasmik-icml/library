@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ButtonsModule } from "@progress/kendo-angular-buttons";
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { AuthorComponent } from './author/author.component';
 import { GenreComponent } from './genre/genre.component';
 import {MatIconModule} from '@angular/material/icon';
-import {Routes, RouterModule} from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component';
+
+
 
 const appRoutes: Routes = [
   {path: '', component: BooksComponent},
@@ -20,12 +28,18 @@ const appRoutes: Routes = [
     AppComponent,
     BooksComponent,
     AuthorComponent,
-    GenreComponent
+    GenreComponent,
+    AddGenreFormComponent,
   ],
   imports: [
     BrowserModule,
     MatIconModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    GridModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

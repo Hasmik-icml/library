@@ -1,0 +1,7 @@
+{
+  "genre": [
+   	{ "id": 1, "genreName": "Վեպ"},
+	{ "id": 2, "genreName": "Վիպակ"},
+	{ "id": 3, "genreName": "Պատմվածք"}
+  ]
+}

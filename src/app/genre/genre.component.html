@@ -1,1 +1,9 @@
 <p>genre works!</p>
+<kendo-grid [data]="genreData">
+    <kendo-grid-column field="id" title="ID"> </kendo-grid-column>
+    <kendo-grid-column field="genreName" title="Ժանր"> </kendo-grid-column>
+    <kendo-grid-column title="edit/remove"> 
+    </kendo-grid-column>
+    <button kendoButton >Browse</button>
+    <button kendoButton  icon="folder"></button>
+</kendo-grid>
