@@ -20,7 +20,6 @@ export class GenreComponent implements OnInit {
   public modal = false;
 
   ngOnInit(): void {
-    
     this.genre.getAllGenre().subscribe((allData)=>{
       console.log(allData);
       this.genreData = allData

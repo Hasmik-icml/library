@@ -15,6 +15,7 @@ export class AuthorComponent implements OnInit {
     authorName: new FormControl('')
   });
 
+  editMode = false;
   authorData: any =[];
   public modal = false;
 
@@ -33,6 +34,7 @@ export class AuthorComponent implements OnInit {
 
  editAuthor(dataItem: any){
    this.modal = true;
+   this.editMode = true;
    this.addAuthorData = new FormGroup({
     authorName: new FormControl(dataItem)
   });

@@ -11,7 +11,7 @@ import { AuthorComponent } from '../author/author.component';
 })
 export class AddAuthorFormComponent implements OnInit {
   modalTitle = "ADD NEW AUTHOR";
-  editMode = false;
+
   editId = 0;
 
   @Output() close = new EventEmitter<void>()
@@ -23,16 +23,27 @@ export class AddAuthorFormComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.editId = this.authorC.addAuthorData.value.authorName.id;
-    this.editMode = true;
-    this.addAuthorData = new FormGroup({
-      authorName: new FormControl(this.authorC.addAuthorData.value.authorName.authorName)
-    });
+    if(this.authorC.editMode){
+      this.editId = this.authorC.addAuthorData.value.authorName.id;
+      this.addAuthorData = new FormGroup({
+        authorName: new FormControl(this.authorC.addAuthorData.value.authorName.authorName)
+      });
+    }else{
+      this.authorC.editMode = false;
+      this.addAuthorData = new FormGroup({
+        authorName: new FormControl('')
+      });
+    }  
   }
 
   SaveData(status:boolean){
-    console.log("edit mod=",   this.editMode, this.editId);
-   
+    console.log("edit mod=",   this.authorC.editMode, this.editId);
+   if(this.authorC.editMode){
+    this.author.updateAuthorData(this.editId, this.addAuthorData.value).subscribe();
+    this.authorC.editMode = false;
+    this.authorC.modal = status;
+    this.authorC.ngOnInit();
+   }else{
       console.log((this.addAuthorData.value));
       console.log("status=", status);
       if (this.addAuthorData.value.authorName === "" ){
@@ -42,7 +53,7 @@ export class AddAuthorFormComponent implements OnInit {
         this.authorC.modal = status;
       }
       this.authorC.ngOnInit();
-    
+   }
 
   }
 }

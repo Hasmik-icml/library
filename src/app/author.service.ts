@@ -20,6 +20,8 @@ export class AuthorService {
     
     return this.http.post('http://localhost:3000/authors', data);
   }
-  
+  updateAuthorData(id:number, data:any){
+    return this.http.put('http://localhost:3000/authors/'+ `${id}`, data);
+  }
 
 }

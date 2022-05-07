@@ -13,11 +13,6 @@
       "id": 3
     }
   ],
-  "authors": [
-    {
-      "authorName": "Author1",
-      "id": 3
-    }
-  ],
+  "authors": [],
   "books": []
 }
