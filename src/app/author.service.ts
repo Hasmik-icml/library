@@ -15,5 +15,11 @@ export class AuthorService {
   deleteAuthor(dataItem: any){
     return this.http.delete('http://localhost:3000/authors/'+ `${dataItem}`);
   }
+  saveAuthorData(data:any){
+    console.log(data);
+    
+    return this.http.post('http://localhost:3000/authors', data);
+  }
+  
 
 }

@@ -1,7 +1,7 @@
 <div class="backdrop"></div>
 
 <div class="modal">
-    <form [formGroup] = "addAuthorData" >
+    <form [formGroup] = "addAuthorData" (ngSubmit)="SaveData(false)" >
         <nav class="navbar">
             <h1>{{ modalTitle }}</h1>
         </nav>

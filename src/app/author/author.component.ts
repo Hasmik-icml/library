@@ -31,6 +31,11 @@ export class AuthorComponent implements OnInit {
     this.ngOnInit();
 }
 
- 
+ editAuthor(dataItem: any){
+   this.modal = true;
+   this.addAuthorData = new FormGroup({
+    authorName: new FormControl(dataItem)
+  });
+ }
 
 }
