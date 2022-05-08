@@ -1,1 +1,21 @@
-<p>books works!</p>
+<button class="btn" (click)="modal=true; editMode=false">Add new</button>
+
+<kendo-grid [data]="booksData" >
+    <kendo-grid-column field="id" title="ID"> </kendo-grid-column>
+    <kendo-grid-column field="booksName" title="Books"> </kendo-grid-column>
+    <kendo-grid-column field="date" title="Date"> </kendo-grid-column>
+
+    <!-- <kendo-grid-column field="genreList" title="Genre"> 
+      <ng-template kendoGridCellTemplate let-dataItem >
+          <li *ngFor="let item of dataItem.genreList" class="author-genre-list">{{item.genreName}}</li>
+      </ng-template> 
+    </kendo-grid-column> -->
+
+    <kendo-grid-column title="Edit/Remove" >   
+        <ng-template kendoGridCellTemplate let-dataItem >
+        <input kendoGridEditCommand type="button" value="Edit" (click)="editBooks(dataItem)"  />
+        <input kendoGridRemoveCommand type="button" value="Remove"  class="btn-edit" (click)="deleteBooks(dataItem.id)"/>
+      </ng-template> </kendo-grid-column>
+    </kendo-grid>
+
+    <app-add-books-form *ngIf="modal" (close)="modal = false" ></app-add-books-form>

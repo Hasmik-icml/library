@@ -9,7 +9,18 @@ export class BooksComponent implements OnInit {
 
   constructor() { }
 
+  editMode = false;
+  booksData: any = [];
+  public modal = false;
+
   ngOnInit(): void {
   }
 
+  deleteBooks(dataItem:any){
+
+  }
+
+  editBooks(dataItem:any){
+
+  }
 }

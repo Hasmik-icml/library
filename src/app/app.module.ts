@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component';
 import { AddAuthorFormComponent } from './add-author-form/add-author-form.component';
 import { FormsModule } from '@angular/forms';
+import { AddBooksFormComponent } from './add-books-form/add-books-form.component';
 
 const appRoutes: Routes = [
   {path: '', component: BooksComponent},
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     AuthorComponent,
     GenreComponent,
     AddGenreFormComponent,
-    AddAuthorFormComponent
+    AddAuthorFormComponent,
+    AddBooksFormComponent
   ],
   imports: [
     BrowserModule,
