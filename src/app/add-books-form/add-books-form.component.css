@@ -1,0 +1,56 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.4);
+}
+.modal{
+    padding: 1rem;
+    background: rgb(148 170 210);
+    margin-top: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, 0);
+}
+
+form{
+    width: 400px;
+    display: inline-block;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+.navbar{
+    background: cornflowerblue; 
+}
+
+.inputDiv{
+   display: flex; 
+   flex-direction: column;
+   margin-bottom: 20px;
+}
+#BooksName{
+    font-size: larger;
+}
+#BooksDate{
+    font-size: larger;
+}
+
+input:focus{
+    outline: none;
+}
+
+.book-name-lable{
+    text-align: left;
+    color: white;
+}
+
+.btn-add{
+    margin-right: 10px;
+}
+
+

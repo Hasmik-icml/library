@@ -1,1 +1,17 @@
-<p>add-books-form works!</p>
+<div class="backdrop"></div>
+
+<div class="modal">
+    <form [formGroup] = "addBooksData" (ngSubmit)="SaveData(false)">
+        <nav class="navbar">
+            <h1>{{ modalTitle }}</h1>
+        </nav>
+        <div class="inputDiv">
+            <label for="BooksName" class="book-name-lable">Book Name </label>
+            <input id="BooksName"  placeholder="Enter the new Book Name" formControlName="bookName">
+            <label for="BooksDate" class="book-name-lable">Book Date </label>
+            <input id="BooksDate"  placeholder="Enter the new Book Date" formControlName="bookDate">
+        </div>
+        <input type="submit" class="btn-add" value="Add">
+        <button class="btn-add" (click)="close.emit()">Cancle</button>
+    </form>
+</div>
