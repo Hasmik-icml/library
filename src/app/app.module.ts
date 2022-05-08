@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component';
 import { AddAuthorFormComponent } from './add-author-form/add-author-form.component';
-
+import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   {path: '', component: BooksComponent},
@@ -40,7 +40,8 @@ const appRoutes: Routes = [
     GridModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    ButtonsModule
+    ButtonsModule,
+    FormsModule
 
   ],
   providers: [],

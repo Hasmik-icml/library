@@ -33,7 +33,7 @@ h1{
    flex-direction: column;
    margin-bottom: 20px;
 }
-#AuthorName{
+#authorName{
     font-size: larger;
     
 }
@@ -46,7 +46,9 @@ input:focus{
     text-align: left;
     color: white;
 }
-
+.checklist-genre{
+    text-align: left;
+}
 .btn-add{
     margin-right: 10px;
 }

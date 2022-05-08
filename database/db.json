@@ -11,8 +11,72 @@
     {
       "genreName": "Պատմվածք",
       "id": 3
+    },
+    {
+      "genreName": "Պոեմ",
+      "id": 4
+    },
+    {
+      "genreName": "Առակ",
+      "id": 5
     }
   ],
-  "authors": [],
+  "authors": [
+    {
+      "authorName": "Մուրացան",
+      "genreList": [
+        {
+          "genreName": "Վեպ",
+          "id": 1,
+          "selected": true
+        }
+      ],
+      "id": 1
+    },
+    {
+      "authorName": "Րաֆֆի",
+      "genreList": [
+        {
+          "genreName": "Վեպ",
+          "id": 1,
+          "selected": true
+        }
+      ],
+      "id": 2
+    },
+    {
+      "authorName": "Մխիթար Գոշը",
+      "genreList": [
+        {
+          "genreName": "Առակ",
+          "id": 5,
+          "selected": true
+        }
+      ],
+      "id": 3
+    },
+    {
+      "authorName": "Վարդան Այգեկցի",
+      "genreList": [
+        {
+          "genreName": "Առակ",
+          "id": 5,
+          "selected": true
+        }
+      ],
+      "id": 4
+    },
+    {
+      "authorName": "Ակսել Բակունցի ",
+      "genreList": [
+        {
+          "genreName": "Պատմվածք",
+          "id": 3,
+          "selected": true
+        }
+      ],
+      "id": 5
+    }
+  ],
   "books": []
 }

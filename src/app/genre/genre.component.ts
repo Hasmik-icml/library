@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { GenreService } from '../genre.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Injectable } from "@angular/core";
 
 @Component({
   selector: 'app-genre',
   templateUrl: './genre.component.html',
   styleUrls: ['./genre.component.css']
+})
+@Injectable({
+  providedIn: 'root'
 })
 export class GenreComponent implements OnInit {
 
@@ -16,7 +20,7 @@ export class GenreComponent implements OnInit {
   });
 
   editMode = false;
-  genreData: any =[];
+  public genreData: any =[];
   public modal = false;
 
   ngOnInit(): void {
