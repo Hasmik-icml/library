@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonsModule } from "@progress/kendo-angular-buttons";
+import { DialogsModule } from "@progress/kendo-angular-dialog";
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
@@ -16,6 +17,8 @@ import { AddGenreFormComponent } from './add-genre-form/add-genre-form.component
 import { AddAuthorFormComponent } from './add-author-form/add-author-form.component';
 import { FormsModule } from '@angular/forms';
 import { AddBooksFormComponent } from './add-books-form/add-books-form.component';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+
 
 const appRoutes: Routes = [
   {path: '', component: BooksComponent},
@@ -43,8 +46,9 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     ReactiveFormsModule,
     ButtonsModule,
-    FormsModule
-
+    FormsModule,
+    InputsModule,
+    DialogsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

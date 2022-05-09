@@ -11,11 +11,29 @@
     </kendo-grid-column>
     <kendo-grid-column title="Edit/Remove" >   
         <ng-template kendoGridCellTemplate let-dataItem >
-        <input kendoGridEditCommand type="button" value="Edit" (click)="editAuthor(dataItem)"  />
-        <input kendoGridRemoveCommand type="button" value="Remove"  class="btn-edit" (click)="deleteAuthor(dataItem.id)"/>
+        <input kendoGridEditCommand type="button" value="Edit"  (click)="editAuthor(dataItem)" />
+        <input kendoGridRemoveCommand type="button" value="Remove"  class="btn-edit" (click)="open(dataItem.id)"/>
       </ng-template> </kendo-grid-column>
 </kendo-grid>
 
 
 <app-add-author-form *ngIf="modal" (close)="modal = false"  ></app-add-author-form>
 
+
+<kendo-dialog
+  title="Please confirm"
+  *ngIf="opened"
+  (close)="close('cancel')"
+  [minWidth]="250"
+  [width]="450"
+>
+  <p style="margin: 30px; text-align: center;">
+    Are you sure you want to continue?
+  </p>
+  <kendo-dialog-actions>
+    <button kendoButton (click)="close('no')">No</button>
+    <button kendoButton (click)="close('yes')" >
+      Yes
+    </button>
+  </kendo-dialog-actions>
+</kendo-dialog>
