@@ -1,16 +1,49 @@
 <div class="backdrop"></div>
 
 <div class="modal">
-    <form [formGroup] = "addBooksData" (ngSubmit)="SaveData(false)">
+    <form [formGroup] = "addBooksData" (ngSubmit)="SaveData($event,false)">
         <nav class="navbar">
             <h1>{{ modalTitle }}</h1>
         </nav>
         <div class="inputDiv">
             <label for="BooksName" class="book-name-lable">Book Name </label>
-            <input id="BooksName"  placeholder="Enter the new Book Name" formControlName="bookName">
+            <input id="BooksName"  placeholder="Enter the new Book Name" formControlName="bookName" required>
             <label for="BooksDate" class="book-name-lable">Book Date </label>
-            <input id="BooksDate"  placeholder="Enter the new Book Date" formControlName="bookDate">
+            <input id="BooksDate"  placeholder="Enter the new Book Date" formControlName="bookDate" required>
         </div>
+        <!-- dropdowns -->
+        <div class="container-fluid example-wrapper">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 example-col">
+                    <p>Genre:</p>
+                    <kendo-dropdownlist
+                        [data]="genreList"
+                        [defaultItem]="defaultItemGenres"
+                        placeholder="Select genre..."
+                        [textField]="'genreName'"
+                        [valueField]="'genreId'"
+                        (selectionChange)="handleGenreChange($event)"
+                        required
+                    >
+                    </kendo-dropdownlist>
+                </div>
+                <div class="col-xs-12 col-sm-4 example-col">
+                    <p>Author:</p>
+                    <kendo-dropdownlist
+                        [disabled]="isDisabledAuthors"
+                        [data]="authorResultList"
+                        [defaultItem]="defaultItemAuthors"
+                        placeholder="Select author..."
+                        [textField]="'authorName'"
+                        [valueField]="'authorId'"
+                        (selectionChange)="handleAuthorChange($event)"
+                        required
+                    >
+                    </kendo-dropdownlist>
+                </div>
+            </div>
+        </div>
+        <!-- end dropdowns -->
         <input type="submit" class="btn-add" value="Add">
         <button class="btn-add" (click)="close.emit()">Cancle</button>
     </form>

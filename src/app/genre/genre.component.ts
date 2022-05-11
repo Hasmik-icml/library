@@ -13,6 +13,24 @@ import { Injectable } from "@angular/core";
 })
 export class GenreComponent implements OnInit {
 
+  public opened = false;
+  dataItem = "";
+  public close(status: string): void {
+    console.log(`Dialog result: ${status}`);
+    if(status == 'yes') {
+      this.deleteGenre(this.dataItem);
+    }
+    this.opened = false;
+    this.ngOnInit();
+  }
+
+  public open(dataItem:any): void {
+    this.dataItem = dataItem;
+    this.opened = true;
+  }
+
+
+
   constructor(private genre:GenreService) { }
 
   addGenreData = new FormGroup({
@@ -20,13 +38,13 @@ export class GenreComponent implements OnInit {
   });
 
   editMode = false;
-  public genreData: any =[];
+  public genreData: any = [];
   public modal = false;
 
   ngOnInit(): void {
-    this.genre.getAllGenre().subscribe((allData)=>{
-      console.log(allData);
-      this.genreData = allData
+    this.genre.getAllGenre().subscribe((allData:any)=>{
+        
+      this.genreData = allData;
     });
     
   }

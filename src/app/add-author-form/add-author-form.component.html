@@ -12,15 +12,9 @@
    
         <fieldset [name]="genreData" class="checklist-genre" >
             <legend>Choose genre:</legend>
-<!-- 
-            <div *ngFor="let item of addAuthorData.value.genreList; let i = index" >
-              <input type="checkbox" [id]="item['id']" [value]="item['genreName']" [checked]="item.id"
-              (change)="onCheckChange(item)" >
-              <label for="item['id']" >{{item['genreName']}} {{item['id']}}</label>
-            </div> -->
 
             <hr>
-
+            {{editId}}
             <div *ngFor="let item of genreData; let i = index" >
                 <input type="checkbox" [id]="item['id']" [value]="item['genreName']" 
                 (change)="onCheckChange(item)" >
@@ -28,11 +22,8 @@
               </div>
         
         </fieldset>
-        
+          
         <input type="submit" class="btn-add" value="Add">
         <button class="btn-add" (click)="close.emit()">Cancle</button>
     </form>
 </div>  
-<!-- [checked]="item['id'] == addAuthorData.value.genreList[i]['id']" -->
-<!-- [(ngModel)] = "item['checked']" -->
-<!-- name="genreName" -->

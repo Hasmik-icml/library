@@ -12,5 +12,11 @@ export class BooksService {
     return this.http.get('http://localhost:3000/books');
   }
 
-
+  deleteBooks(dataItem: any){
+      return this.http.delete('http://localhost:3000/books/'+ `${dataItem}`);
+  }
+  saveGenreData(data: any){
+    console.log("data=", data);
+    return this.http.post('http://localhost:3000/genre', data);
+  }
 }

@@ -61,19 +61,18 @@ export class AddAuthorFormComponent implements OnInit {
 
     if (this.authorC.editMode) {
       this.editId = this.authorC.addAuthorData.value.authorName.id;
-      console.log(
-        'տեսնել խմբագրան տվյալները-',
-        this.authorC.addAuthorData.value.genreList.genreList
-      );
 
       this.addAuthorData = new FormGroup({
         authorName: new FormControl(
           this.authorC.addAuthorData.value.authorName.authorName
         ),
+              
         genreList: new FormControl(
           this.authorC.addAuthorData.value.genreList.genreList
         ),
+        
       });
+     
     } else {
       this.authorC.editMode = false;
       this.addAuthorData = new FormGroup({

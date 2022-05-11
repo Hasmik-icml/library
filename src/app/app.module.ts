@@ -18,6 +18,7 @@ import { AddAuthorFormComponent } from './add-author-form/add-author-form.compon
 import { FormsModule } from '@angular/forms';
 import { AddBooksFormComponent } from './add-books-form/add-books-form.component';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
 
 const appRoutes: Routes = [
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     ButtonsModule,
     FormsModule,
     InputsModule,
-    DialogsModule
+    DialogsModule,
+    DropDownsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

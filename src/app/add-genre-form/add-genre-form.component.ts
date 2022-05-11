@@ -53,6 +53,7 @@ export class AddGenreFormComponent implements OnInit {
     }else{
       console.log((this.addGenreData.value));
       console.log("status=", status);
+      
       if (this.addGenreData.value.genreName === "" ){
         alert("You can't write an empty value.");
       }else{
