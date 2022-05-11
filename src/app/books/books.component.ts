@@ -10,6 +10,22 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class BooksComponent implements OnInit {
 
+  public opened = false;
+  dataItem = "";
+  public close(status: string): void {
+    console.log(`Dialog result: ${status}`);
+    if(status == 'yes') {
+      this.deleteBooks(this.dataItem);
+    }
+    this.opened = false;
+    this.ngOnInit();
+  }
+
+  public open(dataItem:any): void {
+    this.dataItem = dataItem;
+    this.opened = true;
+  }
+
   constructor(private book: BooksService) { }
 
   editMode = false;
@@ -26,7 +42,6 @@ export class BooksComponent implements OnInit {
       console.log(allBooksData)
       this.booksData = allBooksData;
     });
-    
     
   }
 

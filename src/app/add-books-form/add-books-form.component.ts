@@ -1,9 +1,9 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {FormControl, FormGroup, Validators } from '@angular/forms';
 import { BooksService } from './../books.service';
 import { GenreService } from './../genre.service';
 import { AuthorService } from './../author.service';
-import { Subscription } from 'rxjs';
+import { BooksComponent } from '../books/books.component';
 
 @Component({
   selector: 'app-add-books-form',
@@ -39,7 +39,7 @@ export class AddBooksFormComponent implements OnInit {
     bookDate: new FormControl('',[Validators.required]),
     genreName: new FormControl('',[Validators.required]),
     authorName: new FormControl('',[Validators.required])
-})
+});
 
 
   handleGenreChange(value:any) {
@@ -79,8 +79,10 @@ export class AddBooksFormComponent implements OnInit {
 
   @Output() close = new EventEmitter<void>(); 
 
-  constructor(private book: BooksService, private genre: GenreService, 
-               private author: AuthorService) {}
+  constructor(private book: BooksService,
+               private genre: GenreService, 
+               private author: AuthorService,
+               private bookC: BooksComponent) {}
 
   ngOnInit(): void {
     this.genre.getAllGenre().subscribe((allGenreData)=>{
@@ -105,6 +107,8 @@ export class AddBooksFormComponent implements OnInit {
   });
   console.log(this.addBooksData.value);
     
-  this.book.(this.addGenreData.value).subscribe();
+  this.book.saveGenreData(this.addBooksData.value).subscribe();
+  this.bookC.modal = status;
+  this.bookC.ngOnInit();
   }
 }

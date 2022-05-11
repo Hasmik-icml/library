@@ -110,5 +110,81 @@
       "id": 7
     }
   ],
-  "books": []
+  "books": [
+    {
+      "bookName": "zxzxz",
+      "bookDate": "addad",
+      "genreName": {
+        "genreName": "Պատմվածք",
+        "id": 3
+      },
+      "authorName": {
+        "authorName": "Ակսել Բակունց",
+        "genreList": [
+          {
+            "genreName": "Պատմվածք",
+            "id": 3,
+            "selected": true
+          },
+          {
+            "genreName": "Պոեմ",
+            "id": 4,
+            "selected": true
+          }
+        ],
+        "id": 5
+      },
+      "id": 1
+    },
+    {
+      "bookName": "aaa",
+      "bookDate": "zxzxz",
+      "genreName": {
+        "genreName": "Պատմվածք",
+        "id": 3
+      },
+      "authorName": {
+        "authorName": "Ակսել Բակունց",
+        "genreList": [
+          {
+            "genreName": "Պատմվածք",
+            "id": 3,
+            "selected": true
+          },
+          {
+            "genreName": "Պոեմ",
+            "id": 4,
+            "selected": true
+          }
+        ],
+        "id": 5
+      },
+      "id": 2
+    },
+    {
+      "bookName": "sdada",
+      "bookDate": "ааа",
+      "genreName": {
+        "genreName": "Պոեմ",
+        "id": 4
+      },
+      "authorName": {
+        "authorName": "Ակսել Բակունց",
+        "genreList": [
+          {
+            "genreName": "Պատմվածք",
+            "id": 3,
+            "selected": true
+          },
+          {
+            "genreName": "Պոեմ",
+            "id": 4,
+            "selected": true
+          }
+        ],
+        "id": 5
+      },
+      "id": 3
+    }
+  ]
 }

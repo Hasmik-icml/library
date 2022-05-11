@@ -16,7 +16,7 @@ export class BooksService {
       return this.http.delete('http://localhost:3000/books/'+ `${dataItem}`);
   }
   saveGenreData(data: any){
-    console.log("data=", data);
-    return this.http.post('http://localhost:3000/genre', data);
+
+    return this.http.post('http://localhost:3000/books', data);
   }
 }
