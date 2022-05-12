@@ -60,19 +60,19 @@ export class AddAuthorFormComponent implements OnInit {
     });
 
     if (this.authorC.editMode) {
+      console.log(this.authorC.addAuthorData.value);
+      
       this.editId = this.authorC.addAuthorData.value.authorName.id;
 
       this.addAuthorData = new FormGroup({
         authorName: new FormControl(
           this.authorC.addAuthorData.value.authorName.authorName
         ),
-              
+
         genreList: new FormControl(
           this.authorC.addAuthorData.value.genreList.genreList
         ),
-        
       });
-     
     } else {
       this.authorC.editMode = false;
       this.addAuthorData = new FormGroup({
@@ -83,9 +83,10 @@ export class AddAuthorFormComponent implements OnInit {
   }
 
   SaveData(status: boolean) {
-    console.log('data=', this.addAuthorData);
+    console.log('data=', this.addAuthorData.value);
 
     console.log('edit mod=', this.authorC.editMode, this.editId);
+
     if (this.authorC.editMode) {
       this.author
         .updateAuthorData(this.editId, this.addAuthorData.value)

@@ -2,21 +2,24 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class BooksService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) { }
-
-  getAllBooks(){
+  getAllBooks() {
     return this.http.get('http://localhost:3000/books');
   }
 
-  deleteBooks(dataItem: any){
-      return this.http.delete('http://localhost:3000/books/'+ `${dataItem}`);
+  deleteBooks(dataItem: any) {
+    return this.http.delete('http://localhost:3000/books/' + `${dataItem}`);
   }
-  saveGenreData(data: any){
 
+  saveGenreData(data: any) {
     return this.http.post('http://localhost:3000/books', data);
+  }
+
+  updateBooksData(id: number, data: any) {
+    return this.http.put('http://localhost:3000/books/' + `${id}`, data);
   }
 }

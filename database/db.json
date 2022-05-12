@@ -75,116 +75,15 @@
       "authorName": "Ակսել Բակունց",
       "genreList": [
         {
-          "genreName": "Պատմվածք",
-          "id": 3,
-          "selected": true
-        },
-        {
-          "genreName": "Պոեմ",
-          "id": 4,
-          "selected": true
-        }
-      ],
-      "id": 5
-    },
-    {
-      "authorName": "Author1",
-      "genreList": [
-        {
-          "genreName": "Առակ",
-          "id": 5,
-          "selected": true
-        }
-      ],
-      "id": 6
-    },
-    {
-      "authorName": "Author1",
-      "genreList": [
-        {
           "genreName": "Վեպ",
           "id": 1,
           "selected": true
         }
       ],
-      "id": 7
+      "id": 5
     }
   ],
   "books": [
-    {
-      "bookName": "zxzxz",
-      "bookDate": "addad",
-      "genreName": {
-        "genreName": "Պատմվածք",
-        "id": 3
-      },
-      "authorName": {
-        "authorName": "Ակսել Բակունց",
-        "genreList": [
-          {
-            "genreName": "Պատմվածք",
-            "id": 3,
-            "selected": true
-          },
-          {
-            "genreName": "Պոեմ",
-            "id": 4,
-            "selected": true
-          }
-        ],
-        "id": 5
-      },
-      "id": 1
-    },
-    {
-      "bookName": "aaa",
-      "bookDate": "zxzxz",
-      "genreName": {
-        "genreName": "Պատմվածք",
-        "id": 3
-      },
-      "authorName": {
-        "authorName": "Ակսել Բակունց",
-        "genreList": [
-          {
-            "genreName": "Պատմվածք",
-            "id": 3,
-            "selected": true
-          },
-          {
-            "genreName": "Պոեմ",
-            "id": 4,
-            "selected": true
-          }
-        ],
-        "id": 5
-      },
-      "id": 2
-    },
-    {
-      "bookName": "sdada",
-      "bookDate": "ааа",
-      "genreName": {
-        "genreName": "Պոեմ",
-        "id": 4
-      },
-      "authorName": {
-        "authorName": "Ակսել Բակունց",
-        "genreList": [
-          {
-            "genreName": "Պատմվածք",
-            "id": 3,
-            "selected": true
-          },
-          {
-            "genreName": "Պոեմ",
-            "id": 4,
-            "selected": true
-          }
-        ],
-        "id": 5
-      },
-      "id": 3
-    }
+    
   ]
 }

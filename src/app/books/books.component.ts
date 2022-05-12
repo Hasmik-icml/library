@@ -32,7 +32,7 @@ export class BooksComponent implements OnInit {
   booksData: any = [];
   public modal = false;
 
-  addBookData = new FormGroup({
+  addBooksData = new FormGroup({
     booksName: new FormControl(''),
     date: new FormControl(''),
   });
@@ -41,8 +41,7 @@ export class BooksComponent implements OnInit {
     this.book.getAllBooks().subscribe((allBooksData)=> {
       console.log(allBooksData)
       this.booksData = allBooksData;
-    });
-    
+    }); 
   }
 
 
@@ -57,10 +56,12 @@ export class BooksComponent implements OnInit {
 
     this.modal = true;
     this.editMode = true;
-    this.addBookData = new FormGroup({
-      booksName: new FormControl(dataItem),
-      date: new FormControl(dataItem),
-    });
+    this.addBooksData = new FormGroup({
+      booksName: new FormControl(dataItem.booksName),
+      booksDate: new FormControl(dataItem.booksDate),
+      genreName: new FormControl(dataItem.genreName.genreName),
+      authorName: new FormControl(dataItem.authorName.authorName)
+  });
   }
   }
 

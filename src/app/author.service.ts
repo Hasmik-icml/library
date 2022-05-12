@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthorService {
-
   constructor(private http:HttpClient) { }
 
   getAllAuthor(){
@@ -15,11 +14,11 @@ export class AuthorService {
   deleteAuthor(dataItem: any){
     return this.http.delete('http://localhost:3000/authors/'+ `${dataItem}`);
   }
+
   saveAuthorData(data:any){
-    console.log(data);
-    
     return this.http.post('http://localhost:3000/authors', data);
   }
+
   updateAuthorData(id:number, data:any){
     return this.http.put('http://localhost:3000/authors/'+ `${id}`, data);
   }
